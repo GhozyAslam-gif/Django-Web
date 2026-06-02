@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}Formulir Umpan Balik{% endblock %}
+{% block page_title %}Formulir Umpan Balik{% endblock %}
+{% block subtitle %}Kritik, Saran, dan Masukan{% endblock %}
+{% block nav_feedback %}class="active"{% endblock %}
+
+{% block content %}
+  <div class="box">
+    <h3 class="section-title">Formulir Kontak &amp; Saran</h3>
+    <p>
+      Berikan masukan terbaik Anda untuk pengembangan website profil ini.
+      Semua input bersifat wajib kecuali nama.
+    </p>
+
+    <form>
+      {% csrf_token %}
+
+      <!-- Nama -->
+      <div>
+        <label for="nama">Nama Anda (Opsional):</label><br>
+        <input type="text" id="nama" name="nama" placeholder="Tulis nama Anda">
+        <br><br>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email">Email Anda:</label><br>
+        <input type="email" id="email" name="email" placeholder="nama@gmail.com" required>
+        <br><br>
+      </div>
+
+      <!-- Rating -->
+      <div>
+        <label for="rating">Rating Kepuasan Website (Skala 1-10):</label><br>
+        <input type="number" id="rating" name="rating" placeholder="Masukkan angka 1 hingga 10" required>
+        <br><br>
+      </div>
+
+      <!-- Rekomendasi -->
+      <div>
+        <label>Rekomendasi Website Ini?</label>
+        <div>
+          <input type="radio" id="ya" name="rekomendasi" value="ya" required>
+          <label for="ya">Ya, Sangat</label>
+
+          <input type="radio" id="mungkin" name="rekomendasi" value="mungkin">
+          <label for="mungkin">Mungkin Saja</label>
+
+          <input type="radio" id="tidak" name="rekomendasi" value="tidak">
+          <label for="tidak">Tidak</label>
+          <br><br>
+        </div>
+      </div>
+
+      <!-- Topik -->
+      <div>
+        <label>Topik yang paling menarik:</label>
+        <div>
+          <input type="checkbox" id="topik_biodata" name="topik" value="Biodata">
+          <label for="topik_biodata">Biodata</label>
+
+          <input type="checkbox" id="topik_jadwal" name="topik" value="Jadwal">
+          <label for="topik_jadwal">Jadwal</label>
+
+          <input type="checkbox" id="topik_galeri" name="topik" value="Galeri">
+          <label for="topik_galeri">Galeri</label>
+
+          <input type="checkbox" id="topik_feedback" name="topik" value="Feedback">
+          <label for="topik_feedback">Feedback</label>
+
+          <br><br>
+        </div>
+      </div>
+
+      <!-- Bidang -->
+      <div>
+        <label for="bidang">Saran Pengembangan di Bidang:</label>
+        <select id="bidang" name="bidang" required>
+          <option value="">-- Pilih Bidang --</option>
+          <option value="Desain">Desain</option>
+          <option value="Konten">Konten</option>
+          <option value="Ngoding">Ngoding</option>
+        </select>
+        <br><br>
+      </div>
+
+      <!-- Pesan -->
+      <div>
+        <label for="pesan">Pesan/Saran Lengkap:</label><br>
+        <textarea id="pesan" name="pesan" placeholder="Tulis pesan dan saran Anda secara detail di sini..." required></textarea>
+        <br><br>
+      </div>
+
+      <!-- Tombol -->
+      <div class="button-group">
+        <button type="reset">Atur Ulang</button>
+        <button type="submit">Kirim Feedback</button>
+      </div>
+
+    </form>
+  </div>
+{% endblock %}

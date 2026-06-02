@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Galeri Karya Santri{% endblock %}
+{% block page_title %}Galeri Karya Santri{% endblock %}
+{% block subtitle %}Karya Pertama: Website Profil Pribadi{% endblock %}
+{% block nav_galeri %}class="active"{% endblock %}
+
+{% block content %}
+  <!-- Karya Desain -->
+  <div class="box">
+    <h3 class="section-title">Karya Desain</h3>
+    <div class="gallery">
+      <div class="card">
+        <img src="{% static 'images/halaqoh.jpg' %}" alt="Foto Halaqoh">
+        <p>Foto Halaqoh.</p>
+      </div>
+      <div class="card">
+        <img src="{% static 'images/ngoding.jpg' %}" alt="Foto Ngoding">
+        <p>Foto ketika ngoding python.</p>
+      </div>
+      <div class="card">
+        <img src="{% static 'images/Angkatan 4.jpg' %}" alt="Foto Angkatan 4">
+        <p>Foto angkatan 4.</p>
+      </div>
+      <div class="card">
+        <img src="{% static 'images/Pelombaan.jpg' %}" alt="Foto Perlombaan IT">
+        <p>Foto ketika perlombaan IT.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Karya Video -->
+  <div class="box">
+    <h3 class="section-title">Karya Video</h3>
+    <div class="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Nu16eO1Qu88?si=xqiLJK_uPPi650O7"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+{% endblock %}

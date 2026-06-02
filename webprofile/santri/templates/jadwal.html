@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Jadwal Kegiatan Belajar{% endblock %}
+{% block page_title %}Jadwal Kegiatan{% endblock %}
+{% block subtitle %}Pekan Ini: Belajar Bahasa Arab{% endblock %}
+{% block nav_jadwal %}class="active"{% endblock %}
+
+{% block content %}
+  <div class="box">
+    <h3 class="section-title">Jadwal Kegiatan Belajar</h3>
+    <table border="1" id="table-basic">
+      <thead class="bg-blue">
+        <tr>
+          <th colspan="2">Waktu</th>
+          <th rowspan="2">Hari</th>
+          <th rowspan="2">Kegiatan</th>
+        </tr>
+        <tr>
+          <th>Mulai</th>
+          <th>Selesai</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>08:00</td>
+          <td>10:15</td>
+          <td rowspan="3">Senin-Kamis</td>
+          <td>Pelajaran Bahasa Arab</td>
+        </tr>
+        <tr>
+          <td>10:16</td>
+          <td>13:00</td>
+          <td>Istirahat &amp; Sholat Dzuhur</td>
+        </tr>
+        <tr>
+          <td>13:01</td>
+          <td>Adzan Ashar</td>
+          <td>Pelajaran Bahasa Arab</td>
+        </tr>
+        <tr>
+          <td>08:00</td>
+          <td>09:45</td>
+          <td rowspan="3">Jum'at</td>
+          <td>Pelajaran Bahasa Arab</td>
+        </tr>
+        <tr>
+          <td>10:16</td>
+          <td>13:00</td>
+          <td>Istirahat &amp; Sholat Dzuhur</td>
+        </tr>
+        <tr>
+          <td>13:01</td>
+          <td>Adzan Ashar</td>
+          <td>Pelajaran Bahasa Arab</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

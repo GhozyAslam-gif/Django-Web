@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Biodata Santri{% endblock %}
+{% block page_title %}Biodata Santri{% endblock %}
+{% block subtitle %}Kelas 10 C — Asrama Ibnu Katsir{% endblock %}
+{% block nav_biodata %}class="active"{% endblock %}
+
+{% block content %}
+  <div class="box">
+    <h3 class="section-title">Biodata Singkat</h3>
+    <img class="avatar" src="{% static 'images/IMG_20250910_210419.jpg' %}" alt="Foto Diri">
+    <p>Assalamu'alaikum! Saya adalah siswa HSI Boarding School Purworejo.</p>
+    <p>Saya menyukai belajar teknologi dan ingin menjadi pribadi yang selalu menebar manfaat.</p>
+    <p>Saat ini saya sedang belajar materi <strong>HTML &amp; CSS</strong> dasar untuk membuat website sederhana.</p>
+  </div>
+
+  <div class="box">
+    <h3 class="section-title">Hobi</h3>
+    <ul class="list">
+      <li>Ngoding</li>
+      <li>Membaca</li>
+      <li>Olahraga dan Berenang</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h3 class="section-title">Cita-cita</h3>
+    <ol class="list">
+      <li>Programmer</li>
+      <li>Ethical Hacker</li>
+      <li>Guru</li>
+    </ol>
+  </div>
+
+  <div class="box">
+    <h3 class="section-title">Kontak</h3>
+    <div class="contact">
+      <p><strong>Whatsapp:</strong> 0877-8637-8492</p>
+      <p><strong>Telegram:</strong> <a href="https://t.me/Ghzz_as">Ghzz_as</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/ghozz.as">Intragram</a></p>
+      <p><strong>Email:</strong> masghozyaslam@gmail.com / ghozyaslam02@gmail.com</p>
+    </div>
+  </div>
+{% endblock %}

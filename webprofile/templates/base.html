@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Website Santri{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+  <header class="site-header">
+    <img src="{% static 'images/logo.webp' %}" alt="Logo HSI" style="width:80px; margin-bottom:10px;">
+    <h1>{% block page_title %}HSI Boarding School Purworejo{% endblock %}</h1>
+    <p class="subtitle">{% block subtitle %}Website Profil Sederhana — Kelas X{% endblock %}</p>
+    <hr>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="{% url 'home' %}" {% block nav_home %}{% endblock %}>Beranda</a></li>
+      <li><a href="{% url 'santri:biodata' %}" {% block nav_biodata %}{% endblock %}>Biodata</a></li>
+      <li><a href="{% url 'santri:jadwal' %}" {% block nav_jadwal %}{% endblock %}>Jadwal</a></li>
+      <li><a href="{% url 'santri:galeri' %}" {% block nav_galeri %}{% endblock %}>Galeri</a></li>
+      <li><a href="{% url 'santri:feedback' %}" {% block nav_feedback %}{% endblock %}>Feedback</a></li>
+    </ul>
+    <hr>
+  </nav>
+
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+</body>
+</html>
